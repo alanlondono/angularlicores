@@ -25,7 +25,7 @@ export class ListadoClientesComponent implements OnInit {
     this.serviciocliente.obtenerpokemon().subscribe(
       respuesta => {
        
-        console.log(respuesta);
+        console.log(respuesta); 
       }
     )
 
