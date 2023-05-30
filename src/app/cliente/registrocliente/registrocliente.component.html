@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title style="align-items: center; text-align: center;">Registro cliente</mat-card-title>
+    <mat-card-content>
+        <form novalidate [formGroup]="formularioRegistroCliente" class="direccionformulario">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombres</mat-label>
+                <input formControlName="nombre" matInput placeholder="Ingrese su nombre" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Appellidos</mat-label>
+                <input formControlName="apellidos" matInput placeholder="Ingrese sus apellidos" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Direccion</mat-label>
+                <input formControlName="direccion" matInput placeholder="Ingrese direccion" >
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Seleccione tipo de identificacion</mat-label>
+                <mat-select formControlName="identificacion">
+                    <mat-option value="CC">Cedula de ciudadania</mat-option>
+                    <mat-option value="TI">Tarjeta de identidad</mat-option>
+                </mat-select>
+
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>email</mat-label>
+                <input formControlName="email" matInput placeholder="Ingrese email" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>celular</mat-label>
+                <input formControlName="celular" matInput placeholder="Ingrese celular" >
+            </mat-form-field>
+
+           
+            <button color="primary" mat-raised-button (click)="guardarCliente()">Guardar</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>

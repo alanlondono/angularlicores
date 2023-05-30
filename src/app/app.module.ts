@@ -5,16 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { RegistroclienteComponent } from './cliente/registrocliente/registrocliente.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { ListadoClientesComponent } from './cliente/listado-clientes/listado-clientes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistroclienteComponent,
+    NavbarComponent,
+    ListadoClientesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

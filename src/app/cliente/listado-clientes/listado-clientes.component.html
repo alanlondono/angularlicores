@@ -1,0 +1,54 @@
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<hr>
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="idCliente">
+      <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.idCliente}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Nombres </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="apellidos">
+      <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Apellidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="direccion">
+      <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Dirección </th>
+      <td mat-cell *matCellDef="let element"> {{element.direccion }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="identificacion">
+        <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Identificación </th>
+        <td mat-cell *matCellDef="let element"> {{element.identificacion  }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="celular">
+        <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Celular </th>
+        <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="accion">
+        <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Acción </th>
+        <td mat-cell *matCellDef="let element"> 
+            <mat-icon style="color: red" (click)="eliminarCliente(element.idCliente)">delete</mat-icon>
+            <mat-icon style="color: #1E62A1" (click)="editarCliente()">editar</mat-icon>
+         </td>
+      </ng-container>
+
+      
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
