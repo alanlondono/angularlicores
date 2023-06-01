@@ -1,0 +1,32 @@
+
+<mat-card>
+    <mat-card-title style="align-items: center; text-align: center;">Editar cliente</mat-card-title>
+    <mat-card-content>
+        <form  class="direccionformulario">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombres</mat-label>
+                <input [(ngModel)]="cliente.nombre" name="nombre"  matInput placeholder="Ingrese su nombre" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Appellidos</mat-label>
+                <input [(ngModel)]="cliente.apellidos" name="apellido"  matInput placeholder="Ingrese sus apellidos" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Direccion</mat-label>
+                <input [(ngModel)]="cliente.direccion" name="direccion"  matInput placeholder="Ingrese direccion" >
+            </mat-form-field>
+
+          
+            <mat-form-field class="example-full-width">
+                <mat-label>email</mat-label>
+                <input [(ngModel)]="cliente.email" name="email"  matInput placeholder="Ingrese email" >
+            </mat-form-field>
+            
+           
+            <button color="primary" (click)="editarCliente()" mat-raised-button >Guardar</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>

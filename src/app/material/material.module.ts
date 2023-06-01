@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatTableModule} from '@angular/material/table';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const myModule = [
   BrowserModule,
@@ -25,7 +26,8 @@ const myModule = [
   MatIconModule,
   MatTreeModule,
   MatTableModule,
-  MatRadioModule
+  MatRadioModule,
+  MatDialogModule
 ]
 
 
