@@ -10,13 +10,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { ListadoClientesComponent } from './cliente/listado-clientes/listado-clientes.component';
+import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroclienteComponent,
     NavbarComponent,
-    ListadoClientesComponent
+    ListadoClientesComponent,
+    EditarClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { ListadoClientesComponent } from './cliente/listado-clientes/listado-cli
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

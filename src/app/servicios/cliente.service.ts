@@ -23,9 +23,15 @@ export class ClienteService {
   }
 
   eliminarCliente(IdCliente:string):Observable<any>{    
-    const url = ContenedorURLs.urleliminarCliente.replace('[idCliente]', IdCliente); ;
+    const url = ContenedorURLs.urleliminarCliente.replace('[idCliente]', IdCliente); 
     return this.http.delete<any>(url);
   }
+
+  editarCliente(cliete:any):Observable<any>{    
+    const url = ContenedorURLs.urleditarCliente;
+    return this.http.post<any>(url, cliete);
+  }
+
 
   obtenerpokemon():Observable<any>{    
     const url = ContenedorURLs.urlpokemon

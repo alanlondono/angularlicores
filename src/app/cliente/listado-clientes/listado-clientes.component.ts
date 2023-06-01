@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ClienteService } from 'src/app/servicios/cliente.service';
 import swal from'sweetalert2';
+import { EditarClienteComponent } from '../editar-cliente/editar-cliente.component';
 
 @Component({
   selector: 'app-listado-clientes',
@@ -14,7 +16,8 @@ export class ListadoClientesComponent implements OnInit {
   displayedColumns: string[] = ['idCliente', 'nombre', 'apellidos', 'direccion', 'identificacion', 'celular', 'accion'];
   dataSource: any = [];
 
-  constructor(private serviciocliente: ClienteService) { }
+  constructor(private serviciocliente: ClienteService,
+    public dialog: MatDialog,) { }
 
   ngOnInit(): void {
     this.obtenerClientes();
@@ -58,8 +61,21 @@ export class ListadoClientesComponent implements OnInit {
       })
   }
 
-  editarCliente() {
-    alert("en esta funcion va la funcionalidad para editar el cliente")
+  editarCliente(cliente:any) {
+    console.log(cliente);
+    this.abrirModalEdicionCliente(cliente);
+  }
+  abrirModalEdicionCliente(cliente:any) {
+    const dialogConfig = new MatDialogConfig();
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;        
+        dialogConfig.data = {
+            data: cliente,
+            title: 'Edicion Cliente'
+        };
+
+        this.dialog.open(EditarClienteComponent, dialogConfig);
+    
   }
 
 }

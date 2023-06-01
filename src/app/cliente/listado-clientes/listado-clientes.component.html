@@ -43,7 +43,7 @@
         <th mat-header-cell *matHeaderCellDef style="background-color: #1E62A1; color: #FFFFFF;"> Acción </th>
         <td mat-cell *matCellDef="let element"> 
             <mat-icon style="color: red" (click)="eliminarCliente(element.idCliente)">delete</mat-icon>
-            <mat-icon style="color: #1E62A1" (click)="editarCliente()">editar</mat-icon>
+            <mat-icon style="color: #1E62A1" (click)="editarCliente(element)">editar</mat-icon>
          </td>
       </ng-container>
 
