@@ -42,7 +42,7 @@ export class RegistroclienteComponent implements OnInit {
         if(respuesta[0].idCliente > 0){
           swal.fire( 
             'Ok',           
-            'Cliente registrado satisfactoriamente',
+            'Cliente registrado satisfactoriamente version alan',
             'success'
           )          
           this.limpiarFormulario();

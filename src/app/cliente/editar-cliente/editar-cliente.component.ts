@@ -52,7 +52,7 @@ this.clienteServicio.editarCliente(cliente).subscribe(
         if(respuesta[0].idCliente > 0){
           swal.fire( 
             'Ok',           
-            'Cliente actualizado correctamente',
+            'Cliente actualizado correctamente version alan',
             'success'
           )          
           this.dialogRef.close();
